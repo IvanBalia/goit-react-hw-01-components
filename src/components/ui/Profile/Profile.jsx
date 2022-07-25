@@ -1,13 +1,14 @@
 import propTypes from "prop-types";
 
-import {Box,Avatar,UserName,Additionals,Container,Stats,StatItem} from '../components/ui/Profile/common'
+import { Box, Avatar, UserName, Additionals, Container, Stats, StatItem } from './index';
 
 
 
 
 
 export const Profile = ({ username, tag, location, avatar,  stats  }) => {
-    return ( <Box><Container class="description">
+    return (<Box>
+        <Container class="description">
         <Avatar
             src={avatar}
             alt="User avatar"

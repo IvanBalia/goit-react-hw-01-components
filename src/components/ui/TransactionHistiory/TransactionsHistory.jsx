@@ -1,9 +1,10 @@
 import  propTypes  from 'prop-types';
 
-import { Table, TableBody, TableBodyRow, TableBodyText, TableHead, TableHeader, TableHeadRow } from './ui/TransactionHistiory/index';
+import { Table, TableBody, TableBodyRow, TableBodyText, TableHead, TableHeader, TableHeadRow,Container } from './index';
 
 export const TransactionHistory = ({ items }) => {
   return (
+    <Container>
     <Table class="transaction-history">
       <TableHead>
         <TableHeadRow>
@@ -20,7 +21,8 @@ export const TransactionHistory = ({ items }) => {
           <TableBodyText>{item.currency}</TableBodyText>
         </TableBodyRow>))}
       </TableBody>
-    </Table>
+      </Table>
+      </Container>
   )
 
 };

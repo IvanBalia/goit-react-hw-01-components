@@ -1,27 +1,18 @@
 
-import user from 'user.json';
-import data from 'data.json';
-import friends from 'friends.json';
-import items from 'transactions.json'
+import user from '../mock/user.json';
+import data from '../mock/data.json';
+import friends from '../mock/friends.json';
+import items from '../mock/transactions.json'
 
-import { Profile } from "./Profile";
-import { Statistics } from './Statistics';
-import { FriendList } from './FriendList';
-import { TransactionHistory } from './TransactionsHistory';
+import { Profile } from "./ui/Profile/Profile";
+import { Statistics } from './ui/Statistics/Statistics';
+import { FriendList } from './ui/FriendList/FriendList';
+import { TransactionHistory } from './ui/TransactionHistiory/TransactionsHistory';
 
 
 export const App = () => {
   return (
-    <div
-      //style={{
-      //  height: '100vh',
-      //  display: 'flex',
-      //  justifyContent: 'center',
-      //  alignItems: 'center',
-      //  fontSize: 40,
-      //  color: '#010101'
-      //}}
-    >
+    <div>
      <Profile
   username={user.username}
   tag={user.tag}
