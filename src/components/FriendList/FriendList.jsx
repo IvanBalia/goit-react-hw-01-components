@@ -1,14 +1,15 @@
 import propTypes from "prop-types";
-import {FriendCard,FriendName,IsOnline,FriendAvatar,ListOfFriends} from './index'
+import { FriendCard, FriendName, IsOnline, FriendAvatar, ListOfFriends } from './index';
 
 
-export const FriendList = ({ friends }) => {
+
+export const FriendList = ({ friends,theme}) => {
     return (
         <ListOfFriends>
             {friends.map(friend => (
                 <FriendCard
                     className="item" key={friend.id}>
-                    <IsOnline style={friend.isOnline ? { backgroundColor: "green" } : { backgroundColor: "yellow" }} />
+                    <IsOnline style={friend.isOnline ? { backgroundColor: theme.colors.green}  : { backgroundColor: theme.colors.yellow} } />
                     <FriendAvatar
                         className="avatar"
                         src={friend.avatar}

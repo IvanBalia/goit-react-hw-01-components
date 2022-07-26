@@ -3,7 +3,10 @@ export const theme = {
         primary: '#000000',
         additional: '#696969',
         white: 'white',
-        lightBackground:'#eeeeee',
+        lightBackground: '#eeeeee',
+        yellow: "yellow",
+        green:"green",
+
     },
     fontSizes: [10, 12, 14, 16, 18, 20],
     space: ['auto', '16px', '32px'],

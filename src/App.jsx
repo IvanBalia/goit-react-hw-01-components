@@ -3,6 +3,7 @@ import user from './mock/user.json';
 import data from './mock/data.json';
 import friends from './mock/friends.json';
 import items from './mock/transactions.json'
+import { theme } from './styleConfig/theme';
 
 import { Profile } from "./components/Profile/Profile";
 import { Statistics } from './components/Statistics/Statistics';
@@ -21,7 +22,7 @@ export const App = () => {
   stats={user.stats}
     />
       <Statistics stats={data} title="Upload Statistics" />
-      <FriendList friends={friends} />
+      <FriendList friends={friends} theme={theme} />
       <TransactionHistory items = {items}/>
       
     </div>
