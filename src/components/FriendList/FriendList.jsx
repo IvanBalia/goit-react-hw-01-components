@@ -1,5 +1,5 @@
 import propTypes from "prop-types";
-import {FriendCard,FriendName,Online,Offline,FriendAvatar,ListOfFriends} from './index'
+import {FriendCard,FriendName,IsOnline,FriendAvatar,ListOfFriends} from './index'
 
 
 export const FriendList = ({ friends }) => {
@@ -7,17 +7,15 @@ export const FriendList = ({ friends }) => {
         <ListOfFriends>
             {friends.map(friend => (
                 <FriendCard
-                    class="item" key={friend.id}>
-                    {friend.isOnline ?
-                        (<Online class="status"></Online>)
-                        : (<Offline class="status"></Offline>)}
+                    className="item" key={friend.id}>
+                    <IsOnline style={friend.isOnline ? { backgroundColor: "green" } : { backgroundColor: "yellow" }} />
                     <FriendAvatar
-                        class="avatar"
+                        className="avatar"
                         src={friend.avatar}
                         alt="User avatar" width="48"
                     />
                     <FriendName
-                        class="name">{friend.name}
+                        className="name">{friend.name}
                     </FriendName>
                 </FriendCard>
             ))}
